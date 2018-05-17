@@ -19,6 +19,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 public class AppiumTest {
+	
 	 private AndroidDriver<?> driver;
 	  
 	    @Before
@@ -84,6 +85,7 @@ public class AppiumTest {
 			assertEquals("首页 are not found", expected, actual);
 			System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>第1条用例执行结束！");
 	    }
+	
 	    @Test
 	    public void testShop002() throws Exception{
 	    	Thread.sleep(1000);
@@ -114,6 +116,7 @@ public class AppiumTest {
 			assertEquals("小米移动页面:精彩通信，从小米开始! are not found", expected, actual);
 	        System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>第2条用例执行结束！");
 	    }
+	
 	    @Test
 	    public void testShop003() throws Exception{
 	    	Thread.sleep(1000);
@@ -153,9 +156,9 @@ public class AppiumTest {
 	        Thread.sleep(3000);
 	        //点击第1个EditText
 	        List<?> et=driver.findElementsByClassName("android.widget.EditText");
-	        ((WebElement) et.get(0)).sendKeys("李小伟");
+	        ((WebElement) et.get(0)).sendKeys("张三");//输出姓名
 	        Thread.sleep(3000);
-	        ((WebElement) et.get(1)).sendKeys("412726198605084515");
+	        ((WebElement) et.get(1)).sendKeys("412726199011111212");//输入身份证号
 	        Thread.sleep(3000);
 	        driver.findElementByAccessibilityId("我已阅读并同意").click();
 	        Thread.sleep(3000);
